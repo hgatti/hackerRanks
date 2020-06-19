@@ -28,10 +28,12 @@ public class Solution2 {
         public int[] shortestReach(int startId) { // 0 indexed
             int[] distances = new int[size];
             Arrays.fill(distances, -1);
+            //Lista encadeada
             Queue<Integer> que = new LinkedList<>();
 
             que.add(startId);
             distances[startId] = 0;
+            //Hashset dos nos visitados
             HashSet<Integer> seen = new HashSet<>();
 
             seen.add(startId);
